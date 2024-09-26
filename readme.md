@@ -22,7 +22,7 @@ VHL. A novel and sharp analysis is provided for the theoretical
  efficiency while achieving comparable recovery performance to
  prior arts.
 ## Algorithms
-<div align=left> <img src=fig/Alg.JPG width="500" height="300" align="center" />  </div>  
+<div align=left> <img src=fig/algs.JPG width="500" height="300" align="center" />  </div>  
 
 ## Experiments   
 Some experiments in our paper.  
