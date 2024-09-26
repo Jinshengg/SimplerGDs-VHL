@@ -1,9 +1,26 @@
-# Symmetric Hankel projected gradient descent (SHGD)
+# Simpler GDs for blind super-resolution with Lower Iteration complexity (VGD-VHL and ScalGD-VHL)
 
-This is the code for "Projected Gradient Descent for Spectral Compressed Sensing via Symmetric Hankel Factorization" by Jinsheng Li, Wei Cui, Xu Zhang, 
-in IEEE Transactions on Signal Processing, doi: 10.1109/TSP.2024.3378004, [arxiv](https://arxiv.org/abs/2403.09031).
+This is the code for "Simpler Gradient Methods for Blind Super-Resolution with Lower Iteration Complexity" by Jinsheng Li, Wei Cui, Xu Zhang, 
+in IEEE Transactions on Signal Processing, DOI: 10.1109/TSP.2024.3470071, [arxiv](https://arxiv.org/abs/2403.09031).
 ## Abstract
-Current spectral compressed sensing methods via Hankel matrix completion employ symmetric factorization to demonstrate the low-rank property of the Hankel matrix. However, previous non-convex gradient methods only utilize asymmetric factorization to achieve spectral compressed sensing. In this paper, we propose a novel nonconvex projected gradient descent method for spectral compressed sensing via symmetric factorization named Symmetric Hankel Projected Gradient Descent (SHGD), which updates only one matrix and avoids a balancing regularization term. SHGD reduces about half of the computation and storage costs compared to the prior gradient method based on asymmetric factorization. Besides, the symmetric factorization employed in our work is completely novel to the prior low-rank factorization model, introducing a new factorization ambiguity under complex orthogonal transformation. Novel distance metrics are designed for our factorization method and a linear convergence guarantee to the desired signal is established with $O (r^2\log(n))$ observations. Numerical simulations demonstrate the superior performance of the proposed SHGD method in phase transitions and computation efficiency compared to state-of-the-art methods.
+We study the problem of blind super-resolution, which can be formulated as a low-rank matrix recovery problem via vectorized Hankel lift (VHL). The previous gradient descent
+ method based on VHL named PGD-VHL relies on additional
+ regularization such as the projection and balancing penalty,
+ exhibiting a suboptimal iteration complexity. In this paper, we
+ propose a simpler unconstrained optimization problem without
+ the above two types of regularization and develop two new
+ and provable gradient methods named VGD-VHL and ScalGD
+VHL. A novel and sharp analysis is provided for the theoretical
+ guarantees of our algorithms, which demonstrates that our
+ methods offer lower iteration complexity than PGD-VHL. In
+ addition, ScalGD-VHL has the lowest iteration complexity while
+ being independent of the condition number. Furthermore, our
+ novel analysis reveals that the blind super-resolution problem is
+ less incoherence-demanding, thereby eliminating the necessity for
+ incoherent projections to achieve linear convergence. Empirical
+ results illustrate that our methods exhibit superior computational
+ efficiency while achieving comparable recovery performance to
+ prior arts.
 ## Algorithms
 <div align=left> <img src=fig/Alg.JPG width="500" height="300" align="center" />  </div>  
 
@@ -24,13 +41,14 @@ If you find this code useful for your research, please consider citing:
 @ARTICLE{10474161,
   author={Li, Jinsheng and Cui, Wei and Zhang, Xu},
   journal={IEEE Transactions on Signal Processing}, 
-  title={Projected Gradient Descent for Spectral Compressed Sensing via Symmetric Hankel Factorization}, 
+  title={Simpler Gradient Methods for Blind Super-Resolution with Lower Iteration Complexity}, 
   year={2024},
   volume={72},
   number={},
-  pages={1590-1606},
-  keywords={Symmetric matrices;Compressed sensing;Matrix decomposition;Sparse matrices;Costs;Gradient methods;Convergence;Spectral compressed sensing;Hankel matrix completion;symmetric matrix factorization},
-  doi={10.1109/TSP.2024.3378004}}
+  pages={},
+  keywords={—Blind super-resolution, vanilla gradient descent,
+ scaled gradient descent, low-rank matrix factorization},
+  doi={10.1109/TSP.2024.3470071}}
 ```
 ## Code descriptions
 ### main, 1D case 
@@ -48,29 +66,29 @@ VGD-VHL algorithm, 1D case, fast computing via Hankel structure
 SolverScaledgd_fh.m  
 ScalGD-VHL algorithm, 1D case, fast computing via Hankel structure 
 
-generateSignals_bdft_withsep.m 
-generate the true signal and measurements. 
+generateSignals_bdft_withsep.m  
+generate the true signal and measurements.  
 
 --------------------------------------------------------------------------------
 ### ./2Dcase  
 
 demo2d.m 
- run a fxied 2D case via our algorithms, and plot the delay-doppler location via 2D MUSIC
+ run a fixed 2D case via our algorithms, and plot the delay-doppler location via 2D MUSIC 
 
 real2Dcase.mat  
 true signal matrix; a fixed case. 
 
-solverPgd2d.m 
-PGD-VHL algorithm, 2D case
+solverPgd2d.m  
+PGD-VHL algorithm, 2D case 
 
 solverVgd2d.m  
-VGD-VHL algorithm, 2D case 
+VGD-VHL algorithm, 2D case  
 
-solverScaledgd2d.m  
-ScalGD-VHL algorithm, 2D case 
+solverScaledgd2d.m   
+ScalGD-VHL algorithm, 2D case  
 
-music_2d.m 
-MUSIC for 2D  signal super-resolution 
+music_2d.m  
+MUSIC for 2D  signal super-resolution  
 
 getSignals_ofdm.m  
 generate 2-D  signal 
