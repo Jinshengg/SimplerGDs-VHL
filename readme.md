@@ -63,7 +63,7 @@ solverVgd_fh.m
 VGD-VHL algorithm, 1D case, fast computing via Hankel structure 
 
 
-SolverScaledgd_fh.m  
+solverScaledgd_fh.m  
 ScalGD-VHL algorithm, 1D case, fast computing via Hankel structure 
 
 generateSignals_bdft_withsep.m  
