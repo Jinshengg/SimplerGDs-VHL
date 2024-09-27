@@ -32,7 +32,7 @@ Some experiments in our paper.
 <div align=center> <img src=fig/err_vs_runtime.JPG width="500" height="300" align="center" />  </div>
  
 ### Recovery in a 2D real case
- <div align=center> <img src=fig/rrecovery_result_2Dcase.JPG width="500" height="600" align="center" /> </div>
+ <div align=center> <img src=fig/recovery_result_2Dcase.JPG width="500" height="600" align="center" /> </div>
 
 
 ## Citation
