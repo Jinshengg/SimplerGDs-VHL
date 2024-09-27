@@ -74,7 +74,8 @@ generate the true signal and measurements.
 ### ./2Dcase  
 
 demo2d.m 
- run a fixed 2D case via our algorithms, and plot the delay-doppler location via 2D MUSIC 
+
+run a fixed 2D case via our algorithms, and plot the delay-doppler location via 2D MUSIC 
 
 real2Dcase.mat  
 true signal matrix; a fixed case. 
