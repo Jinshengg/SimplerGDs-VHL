@@ -1,4 +1,4 @@
-# Simpler GDs for Blind Super-Resolution with Lower Iteration Complexity 
+# Simpler Gradient Methods for Blind Super-Resolution with Lower Iteration Complexity 
 
 This is the code for "Simpler Gradient Methods for Blind Super-Resolution with Lower Iteration Complexity" by Jinsheng Li, Wei Cui, Xu Zhang, 
 in IEEE Transactions on Signal Processing, DOI: 10.1109/TSP.2024.3470071, [arxiv](https://arxiv.org/abs/2403.09031).
