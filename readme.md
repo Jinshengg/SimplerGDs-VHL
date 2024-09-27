@@ -47,7 +47,7 @@ If you find this code useful for your research, please consider citing:
   volume={72},
   number={},
   pages={},
-  keywords={—Blind super-resolution, vanilla gradient descent,
+  keywords={Blind super-resolution, vanilla gradient descent,
  scaled gradient descent, low-rank matrix factorization},
   doi={10.1109/TSP.2024.3470071}}
 ```
