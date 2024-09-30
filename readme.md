@@ -1,7 +1,7 @@
 # Simpler Gradient Methods for Blind Super-Resolution with Lower Iteration Complexity 
 
 This is the code for "Simpler Gradient Methods for Blind Super-Resolution with Lower Iteration Complexity" by Jinsheng Li, Wei Cui, Xu Zhang, 
-in IEEE Transactions on Signal Processing, DOI: 10.1109/TSP.2024.3470071, [arxiv](https://arxiv.org/abs/2409.18387).
+in IEEE Transactions on Signal Processing, DOI: 10.1109/TSP.2024.3470071, [arxiv](https://arxiv.org/abs/2409.18387v1).
 ## Abstract
 We study the problem of blind super-resolution, which can be formulated as a low-rank matrix recovery problem via vectorized Hankel lift (VHL). The previous gradient descent
  method based on VHL named PGD-VHL relies on additional
