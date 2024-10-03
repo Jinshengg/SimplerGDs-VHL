@@ -39,16 +39,15 @@ Some experiments in our paper.
 ## Citation
 If you find this code useful for your research, please consider citing:
 ```bibtex
-@ARTICLE{10474161,
+@ARTICLE{10697932,
   author={Li, Jinsheng and Cui, Wei and Zhang, Xu},
   journal={IEEE Transactions on Signal Processing}, 
   title={Simpler Gradient Methods for Blind Super-Resolution with Lower Iteration Complexity}, 
   year={2024},
-  volume={72},
+  volume={},
   number={},
-  pages={},
-  keywords={Blind super-resolution, vanilla gradient descent,
- scaled gradient descent, low-rank matrix factorization},
+  pages={1-16},
+  keywords={Superresolution;Complexity theory;Convergence;Minimization;Gradient methods;Signal processing algorithms;Sensors;Optimization;Vectors;Radar imaging;Blind super-resolution;vanilla gradient descent;scaled gradient descent;low-rank matrix factorization},
   doi={10.1109/TSP.2024.3470071}}
 ```
 ## Code descriptions
